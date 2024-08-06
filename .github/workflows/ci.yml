@@ -24,12 +24,12 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
-    #   - name: Instrument code
-    #     uses: AryazE/auto-dylin/instrument@main
+      - name: Instrument code
+        uses: AryazE/auto-dylin/instrument@main
       - name: Run tests
         run: pytest -n auto tests
-    #   - name: Report results
-    #     if: always()
-    #     uses: AryazE/auto-dylin/report@main
+      - name: Report results
+        if: always()
+        uses: AryazE/auto-dylin/report@main
 
   
